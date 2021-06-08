@@ -9,4 +9,4 @@ const modules = new AutoImportStore(require.context('@/store/modules/', true, /\
 
 const store = new Vuex.Store({ state: {}, mutations: {}, actions: {}, modules })
 
-export default store;
+export default store
