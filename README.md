@@ -1,34 +1,15 @@
 # screen-cli
 
-## Project setup
-```
-yarn install
-```
+## z-tools
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+- 将来是一个库
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## 作用
 
-### Run your unit tests
-```
-yarn test:unit
-```
+- 快速 生成布局
+- 清晰 数据管理
+- 易用 丰富组件
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
+## Some VSCode Plugins
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Better Comments
