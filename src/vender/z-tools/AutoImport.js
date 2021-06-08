@@ -42,7 +42,7 @@ export class AutoImportStore extends AutoImport {
     }
 
     getModules (ext = /\.js$/) {
-        const modules = {};
+        let modules = {};
         this._filePath.forEach(item => modules[item.replace(ext, '').slice(2)] = this._webpackContext(item).default);
         this._modules = modules;
         return this._modules;

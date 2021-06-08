@@ -1,6 +1,6 @@
 import Vue        from 'vue'
 import VueRouter  from 'vue-router'
-// TODO 自动引入模块功能
+// 自动引入模块
 import { AutoImportRouters } from '@/vender/z-tools/AutoImport'
 // TODO 键盘 切换 路由
 // import KeyboardRouter     from '@/vender/ztools/KeyboardRouter'
@@ -10,6 +10,7 @@ import { AutoImportRouters } from '@/vender/z-tools/AutoImport'
 // *** [Screen-cli] [2-1] 引入 有特殊需求的路由组件 结束
 
 const routers = [
+  // TODO 键盘 切换 路由
   // ...new KeyboardRouter(),
   // *** [Screen-cli] [1-1] 自动引入 常规路由组件 开始
   ...new AutoImportRouters(require.context('@/views/Main', true, /\.vue$/)).getModules(),
