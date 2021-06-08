@@ -19,13 +19,15 @@ export class AutoImport {
 export class AutoImportRouters extends AutoImport {
     constructor (webpackContext, option = {}) {
         super(webpackContext, option)
+
+        this._prefix = option.prefix || '/'
     }
 
     getModules (ext = /\.vue$/) {
         let modules = []
         modules = this._filePath.map(item => ({
-            path     : `${item.replace(ext, '').slice(1)}`,
-            name     : `${item.replace(ext, '').slice(2)}`,
+            path     : `/${this._prefix.replace(/^\/|\/$/, '')}/${item.replace(ext, '').slice(2)}`.replace(/\/\//, '/'),
+            name     : `/${this._prefix.replace(/^\/|\/$/, '')}/${item.replace(ext, '').slice(2)}`.replace(/\/\//, '/'),
             component: this._webpackContext(item).default,
         }));
         
